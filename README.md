@@ -1,1 +1,1 @@
-# Veri-Taban-Proje
+# Veri-Tabani-Proje
