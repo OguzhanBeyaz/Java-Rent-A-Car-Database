@@ -1,0 +1,131 @@
+--Marka Tablosu
+
+create table Marka(
+
+markaid int not null,
+Marka varchar(40) not null,
+modelid int not null,
+
+primary key (markaid)
+
+);
+
+insert into Marka(markaid,Marka,modelid)
+values(6,'TOFAŞ',6),
+(1,'TOFAŞ',1),
+(4,'BMW',4),
+(5,'BM',5),
+(13,'TOFAŞ',13),
+(16,'TOYYOTA',16),
+(17,'TOFAŞ',17),
+(19,'TOYYOTA',19),
+(24,'MAZDA',24),
+(27,'FORD',27),
+(28,'FORD',28),
+(29,'TOFAŞ',29),
+(33,'FİAT',33),
+(34,'FİAT',34),
+(35,'FİAT',35),
+(21,'TOFAŞ',21),
+(23,'RENAULT',23),
+(26,'TOFAŞ',26),
+(32,'AUDİ',32),
+(12,'TOFAŞ',12),
+(8,'TOFAŞ',8),
+(31,'BUGATTİ',31),
+(2,'TOFAŞ',2),
+(50,'BUGATTİ',50),
+(51,'BUGATTİ',51),
+(52,'BUGATTİ',52),
+(53,'BMW',53),
+(54,'BMW',54),
+(55,'TOFAŞ',55),
+(56,'TOFAŞ',56),
+(57,'TOFAŞ',57),
+(58,'FERRARİ',58),
+(59,'FERRARİ',59);
+
+
+-- 10 Adet silme güncelleme 
+
+delete from Marka
+where markaid = 50;
+
+delete from Marka
+where markaid = 51;
+
+delete from Marka
+where markaid = 52;
+
+delete from Marka
+where markaid = 53;
+
+delete from Marka
+where markaid = 54;
+
+delete from Marka
+where markaid = 55;
+
+delete from Marka
+where markaid = 56;
+
+delete from Marka
+where markaid = 57;
+
+delete from Marka
+where markaid = 58;
+
+delete from Marka
+where markaid = 59;
+
+-- 10 Adet veri güncelleme
+
+update Marka
+set Marka = 'AUDİ'
+where markaid = 26;
+
+update Marka
+set Marka = 'RENAULT'
+where markaid = 21;
+
+update Marka
+set Marka = 'AUDİ'
+where markaid = 12;
+
+update Marka
+set Marka = 'BUGATTİ'
+where markaid = 2;
+
+update Marka
+set Marka = 'BMW'
+where markaid = 1;
+
+update Marka
+set Marka = 'BMW'
+where markaid = 6;
+
+update Marka
+set Marka = 'FORD'
+where markaid = 29;
+
+update Marka
+set Marka = 'NİSSAN'
+where markaid = 13;
+
+update Marka
+set Marka = 'TOYYOTA'
+where markaid = 17;
+
+update Marka
+set Marka = 'BUGATTİ'
+where markaid = 8;
+
+-- 5 Adet matematik işlem
+
+select avg(markaid) from Marka;
+select sum(markaid) from Marka;
+select max(markaid) from Marka;
+select min(markaid) from Marka;
+select count(*) as "Toplam Kayıt Sayısı" from Marka;
+
+select * from Marka

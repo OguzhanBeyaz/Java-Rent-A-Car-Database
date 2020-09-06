@@ -1,0 +1,131 @@
+--Model Tablosu
+
+create table Model(
+
+modelid int not null,
+Model varchar(40) not null,
+
+
+primary key (modelid)
+
+);
+
+insert into Model(modelid,Model)
+values(13,'QASHQAİ'),
+(16,'COROLLA'),
+(17,'YARİS'),
+(19,'AVURİS'),
+(24,'323'),
+(27,'ESCORT'),
+(28,'CORNET'),
+(29,'TORNEA'),
+(33,'ŞAHİN'),
+(34,'LİNEA'),
+(35,'SERÇE'),
+(21,'SEMBOL'),
+(8,'KARTAL'),
+(31,'SPORT'),
+(2,'HEADQUARTES'),
+(26,'KARTAL'),
+(32,'KARTAL'),
+(12,'SERÇE'),
+(6,'SERÇE'),
+(1,'DOĞAN'),
+(5,'DOĞAN'),
+(4,'ŞAHİN'),
+(23,'SEMBOL'),
+(50,'Y1'),
+(51,'Y2'),
+(52,'Y3'),
+(53,'Y4'),
+(54,'Y5'),
+(55,'Y6'),
+(56,'Y7'),
+(57,'Y8'),
+(58,'Y9'),
+(59,'Y10');
+
+
+-- 10 Adet silme güncelleme 
+
+delete from Model
+where modelid = 50;
+
+delete from Model
+where modelid = 51;
+
+delete from Model
+where modelid = 52;
+
+delete from Model
+where modelid = 53;
+
+delete from Model
+where modelid = 54;
+
+delete from Model
+where modelid = 55;
+
+delete from Model
+where modelid = 56;
+
+delete from Model
+where modelid = 57;
+
+delete from Model
+where modelid = 58;
+
+delete from Model
+where modelid = 59;
+
+-- 10 Adet veri güncelleme
+
+update Model
+set Model = 'A2'
+where modelid = 26;
+
+update Model
+set Model = 'A6'
+where modelid = 32;
+
+update Model
+set Model = 'A8'
+where modelid = 12;
+
+update Model
+set Model = 'İ5'
+where modelid = 1;
+
+update Model
+set Model = 'İ7'
+where modelid = 5;
+
+update Model
+set Model = 'İ9'
+where modelid = 4;
+
+update Model
+set Model = 'FORD'
+where modelid = 29;
+
+update Model
+set Model = 'CARS'
+where modelid = 8;
+
+update Model
+set Model = 'EGEA'
+where modelid = 33;
+
+update Model
+set Model = 'TİPO'
+where modelid = 35;
+
+-- 5 Adet matematik işlem
+
+select avg(modelid) from Model;
+select sum(modelid) from Model;
+select max(modelid) from Model;
+select min(modelid) from Model;
+select count(*) as "Sayıların Toplamı" from Model;
+
+select * from Model

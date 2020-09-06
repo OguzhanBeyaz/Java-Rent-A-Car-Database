@@ -1,0 +1,142 @@
+--Müşteri Tablosu
+
+create table Müşteri(
+
+mid int not null,
+
+ad varchar(40) not null,
+soyad varchar(40) not null,
+markaid int not null,
+motorid int not null,
+kasaid int not null,
+renkid int not null,
+şehirid int not null,
+km int not null,
+fiyat int not null,
+ktarihi date not null,
+
+primary key (mid)
+
+);
+
+insert into Müşteri(mid,ad,soyad,markaid,motorid,kasaid,renkid,şehirid,km,fiyat,ktarihi)
+values(1,'Seda','DİLLİ',6,3,1,3,5,520,350,'2020-01-12'),
+(2,'Oğuzhan','BEYAZ',13,5,4,1,2,780,350,'2020-02-01'),
+(3,'Berkay','YOLCU',5,1,4,7,10,820,550,'2020-02-10'),
+(4,'Emirhan','YILMAZ',24,6,8,3,12,320,650,'2020-01-12'),
+(5,'Mete','DAŞKIN',34,7,1,2,5,520,450,'2020-02-15'),
+(6,'Barış','KANDEMİR',27,4,1,3,5,550,250,'2020-02-16'),
+(7,'Fatih','ORAN',28,3,1,3,5,650,750,'2020-02-20'),
+(8,'Mustafa','KARAOĞLU',6,3,1,3,5,420,350,'2020-02-25'),
+(9,'Yiğitcan','KARAGÖZ',2,4,1,3,1,520,750,'2020-02-28'),
+(10,'Kadir','ALPARSLAN',12,2,1,3,20,220,650,'2020-03-02'),
+(11,'Sevdanur','GENÇ',6,3,1,3,5,520,350,'2020-03-01'),
+(12,'Kemal','EYÜPOĞLU',5,3,1,3,5,520,350,'2020-03-10'),
+(13,'Hüseyin','İLGÜN',17,4,3,2,4,710,450,'2020-03-11'),
+(14,'Emircan','TAYYAR',26,5,4,9,19,330,300,'2020-03-20'),
+(15,'Ateş','KILIÇ',8,4,1,10,4,920,650,'2020-04-04'),
+(16,'Sude','DİL',23,3,1,3,8,320,350,'2020-04-20'),
+(17,'Sevgi','AĞ',32,1,2,1,14,590,200,'2020-04-25'),
+(18,'Ali','GÜNDAĞ',6,3,2,4,10,720,350,'2020-05-03'),
+(19,'Beril','DEMİR',16,3,1,3,5,450,550,'2020-05-11'),
+(20,'Nurhan','DEMİR',1,4,1,2,5,420,350,'2020-05-29'),
+(21,'Oğuzhan','GÜÇLÜ',2,4,1,2,5,420,350,'2020-05-29'),
+(22,'Yasin','İZBUDAK',3,4,1,2,5,420,350,'2020-05-29'),
+(23,'Yasin','YASA',4,4,1,2,5,420,350,'2020-05-29'),
+(24,'Uğur','BEYAZ',5,4,1,2,5,420,350,'2020-05-29'),
+(25,'Ramazan','BEYAZ',6,4,1,2,5,420,350,'2020-05-29'),
+(27,'Fatma','BEYAZ',1,4,1,2,5,420,350,'2020-05-29'),
+(28,'Emirkan','KÖSE',5,4,1,2,5,420,350,'2020-05-29'),
+(29,'Uğur','YILMAZ',6,4,1,2,5,420,350,'2020-05-29'),
+(30,'Akın','DEMİR',1,4,1,2,5,420,350,'2020-05-29');
+
+-- 10 Adet silme güncelleme 
+
+delete from Müşteri
+where mid = 21;
+
+delete from Müşteri
+where mid = 22;
+
+delete from Müşteri
+where mid = 23;
+
+delete from Müşteri
+where mid = 24;
+
+delete from Müşteri
+where mid = 25;
+
+delete from Müşteri
+where mid = 26;
+
+delete from Müşteri
+where mid = 27;
+
+delete from Müşteri
+where mid = 28;
+
+delete from Müşteri
+where mid = 29;
+
+delete from Müşteri
+where mid = 30;
+
+-- 10 Adet veri güncelleme
+
+update Müşteri
+set ktarihi = '2020-03-11'
+where mid = 11;
+
+update Müşteri
+set ktarihi = '2020-03-20'
+where mid = 12;
+
+update Müşteri
+set ktarihi = '2020-04-04'
+where mid = 13;
+
+update Müşteri
+set ktarihi = '2020-04-20'
+where mid = 14;
+
+update Müşteri
+set ktarihi = '2020-04-25'
+where mid = 15;
+
+update Müşteri
+set ktarihi = '2020-05-01'
+where mid = 16;
+
+update Müşteri
+set ktarihi = '2020-05-11'
+where mid = 17;
+
+update Müşteri
+set ktarihi = '2020-05-21'
+where mid = 18;
+
+update Müşteri
+set ktarihi = '2020-05-29'
+where mid = 19;
+
+update Müşteri
+set ktarihi = '2020-06-05'
+where mid = 20;
+
+-- 5 Adet matematik işlem
+
+select avg(markaid) from Müşteri;
+select sum(km) from Müşteri;
+select max(fiyat) from Müşteri;
+select min(fiyat) from Müşteri;
+select count(*) as "Toplam Müşteri" from Müşteri;
+
+select * from Müşteri
+
+
+
+
+
+
+

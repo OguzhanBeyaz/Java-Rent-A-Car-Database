@@ -1,0 +1,26 @@
+--Full Join
+select ad, soyad, marka,model,motor,kasa,renk,Sehir,km,fiyat,ktarihi from Müşteri
+full join marka on müşteri.markaid = marka.markaid
+full join model on marka.markaid = model.modelid
+full join motor on motor.motorid = müşteri.motorid
+full join kasa on kasa.kasaid = müşteri.kasaid
+full join renk on renk.renkid = müşteri.renkid
+full join Sehir on Sehir.sehirid = müşteri.sehirid
+
+--Inner Join
+select ad, soyad, marka,model,motor,kasa,renk,Sehir,km,fiyat,ktarihi from Müşteri
+inner join marka on müşteri.markaid = marka.markaid
+inner join model on marka.markaid = model.modelid
+inner join motor on motor.motorid = müşteri.motorid
+inner join kasa on kasa.kasaid = müşteri.kasaid
+inner join renk on renk.renkid = müşteri.renkid
+inner join Sehir on Sehir.sehirid = müşteri.sehirid
+
+--Right Join
+select ad, soyad, marka,model,motor,kasa,renk,Sehir,km,fiyat,ktarihi from Müşteri
+right join marka on müşteri.markaid = marka.markaid
+right join model on marka.markaid = model.modelid
+right join motor on motor.motorid = müşteri.motorid
+right join kasa on kasa.kasaid = müşteri.kasaid
+right join renk on renk.renkid = müşteri.renkid
+right join Sehir on Sehir.sehirid = müşteri.sehirid

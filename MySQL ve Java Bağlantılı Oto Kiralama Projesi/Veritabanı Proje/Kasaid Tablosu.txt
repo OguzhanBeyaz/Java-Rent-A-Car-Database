@@ -1,0 +1,33 @@
+--Kasa Tablosu
+
+create table Kasa(
+
+kasaid int not null,
+kasa varchar(40) not null,
+
+
+primary key (kasaid)
+
+);
+
+insert into Kasa(kasaid,kasa)
+values(1,'Sedan'),
+(2,'Hatchback'),
+(3,'Station wagon'),
+(4,'Cabrio'),
+(5,'Pick up'),
+(6,'SUV');
+
+
+
+-- 5 Adet matematik işlem
+
+select avg(kasaid) from kasa;
+select sum(kasaid) from kasa;
+select max(kasaid) from kasa;
+select min(kasaid) from kasa;
+select count(*) as "Toplam Kasa Tipi" kasa;
+
+select * from kasa
+
+-- Kasa çeşitleri altıdan fazla olmadığı için yirmi veri girişi, sil ve güncelle yapamadım.

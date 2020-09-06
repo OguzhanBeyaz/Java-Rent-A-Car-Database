@@ -1,0 +1,130 @@
+--Renk Tablosu
+
+create table Renk(
+
+renkid int not null,
+renk varchar(40) not null,
+
+
+primary key (renkid)
+
+);
+
+insert into Renk(renkid,renk)
+values(1,'Kızl'),
+(2,'Kızıl'),
+(3,'Kırmızı'),
+(4,'Gri'),
+(5,'Füme'),
+(6,'Mavi'),
+(7,'Lacivert'),
+(8,'Turkuaz'),
+(9,'Turuncu'),
+(10,'Kızıl'),
+(11,'Kızıl'),
+(12,'Kızıl'),
+(13,'Bordo'),
+(14,'Kızıl'),
+(15,'Kahverengi'),
+(16,'Kızıl'),
+(17,'Kızıl'),
+(18,'Kızıl'),
+(19,'Kızıl'),
+(20,'Kestane K.'),
+(21,'Kestane'),
+(22,'Kestane'),
+(23,'Kestane'),
+(24,'Kestane'),
+(25,'Kestane'),
+(26,'Kestane'),
+(27,'Kestane'),
+(28,'Kestane'),
+(29,'Kestane'),
+(30,'Kestane');
+
+-- 10 Adet silme güncelleme 
+
+delete from renk
+where renkid = 21;
+
+delete from renk
+where renkid = 22;
+
+delete from renk
+where renkid = 23;
+
+delete from renk
+where renkid = 24;
+
+delete from renk
+where renkid = 25;
+
+delete from renk
+where renkid = 26;
+
+delete from renk
+where renkid = 27;
+
+delete from renk
+where renkid = 28;
+
+delete from renk
+where renkid = 29;
+
+delete from renk
+where renkid = 30;
+
+-- 10 Adet veri güncelleme
+
+update Renk
+set renk = 'Siyah'
+where renkid = 1;
+
+update Renk
+set renk = 'Beyaz'
+where renkid = 2;
+
+update Renk
+set renk = 'Mor'
+where renkid = 10;
+
+update Renk
+set renk = 'Yeşil'
+where renkid = 11;
+
+update Renk
+set renk = 'Bej'
+where renkid = 12;
+
+update Renk
+set renk = 'Sarı'
+where renkid = 14;
+
+update Renk
+set renk = 'G. Mavisi'
+where renkid = 16;
+
+update Renk
+set renk = 'O. Yeşili'
+where renkid = 17;
+
+update Renk
+set renk = 'Vişne'
+where renkid = 18;
+
+update Renk
+set renk = 'Pembe'
+where renkid = 19;
+
+
+
+
+-- 5 Adet matematik işlem
+
+select avg(renkid) from renk;
+select sum(renkid) from renk;
+select max(renkid) from renk;
+select min(renkid) from renk;
+select count(*) as "Toplam Sayı" from renk;
+
+select * from renk
